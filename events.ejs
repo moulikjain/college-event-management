@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Events</title></head>
+<body>
+<h2>Upcoming Events</h2>
+<ul>
+    <% events.forEach(event => { %>
+        <li><%= event.title %> on <%= event.date %></li>
+    <% }) %>
+</ul>
+<h3>Register</h3>
+<form action="/register" method="POST">
+    Name: <input name="name" required><br>
+    Event Name: <input name="eventName" required><br>
+    <button type="submit">Register</button>
+</form>
+<a href="/">Back to Home</a>
+</body>
+</html>
+
+

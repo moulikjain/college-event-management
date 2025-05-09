@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head><title>Admin Panel</title></head>
+<body>
+<h2>Admin Panel</h2>
+<h3>Add New Event</h3>
+<form action="/admin" method="POST">
+    Title: <input name="title" required><br>
+    Date: <input name="date" required><br>
+    <button type="submit">Add Event</button>
+</form>
+<h3>Existing Events:</h3>
+<ul>
+    <% events.forEach(event => { %>
+        <li><%= event.title %> on <%= event.date %></li>
+    <% }) %>
+</ul>
+<a href="/">Back to Home</a>
+</body>
+</html>
